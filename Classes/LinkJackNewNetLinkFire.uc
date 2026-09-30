@@ -1,4 +1,4 @@
-class LinkJackUTCompLinkFire extends UTComp_LinkFire;
+class LinkJackNewNetLinkFire extends NewNet_LinkFire;
 
 var Pawn StealTarget;
 var float StealTime;

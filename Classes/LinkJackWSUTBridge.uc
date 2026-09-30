@@ -29,17 +29,17 @@ event PostBeginPlay()
     if (WSUTMutator.bEnableEnhancedNetCode)
     {
         WSUTMutator.WeaponClasses[1] = class'LinkJackNewNetLinkGun';
-        WSUTMutator.WeaponClassNames[1] = "LinkJackWSUT.LinkJackNewNetLinkGun";
+        WSUTMutator.WeaponClassNames[1] = "LinkJack.LinkJackNewNetLinkGun";
         WSUTMutator.WeaponPickupClasses[1] = class'LinkJackNewNetLinkGunPickup';
-        WSUTMutator.WeaponPickupClassNames[1] = "LinkJackWSUT.LinkJackNewNetLinkGunPickup";
+        WSUTMutator.WeaponPickupClassNames[1] = "LinkJack.LinkJackNewNetLinkGunPickup";
         Log("LinkJack: WSUT NewNet LinkGun=" $ string(WSUTMutator.WeaponClasses[1]) $ " Pickup=" $ string(WSUTMutator.WeaponPickupClasses[1]));
     }
     else
     {
         WSUTMutator.WeaponClassesUTComp[1] = class'LinkJackUTCompLinkGun';
-        WSUTMutator.WeaponClassNamesUTComp[1] = "LinkJackWSUT.LinkJackUTCompLinkGun";
+        WSUTMutator.WeaponClassNamesUTComp[1] = "LinkJack.LinkJackUTCompLinkGun";
         WSUTMutator.WeaponPickupClassesUTComp[1] = class'LinkJackUTCompLinkGunPickup';
-        WSUTMutator.WeaponPickupClassNamesUTComp[1] = "LinkJackWSUT.LinkJackUTCompLinkGunPickup";
+        WSUTMutator.WeaponPickupClassNamesUTComp[1] = "LinkJack.LinkJackUTCompLinkGunPickup";
         Log("LinkJack: WSUT UTComp LinkGun=" $ string(WSUTMutator.WeaponClassesUTComp[1]) $ " Pickup=" $ string(WSUTMutator.WeaponPickupClassesUTComp[1]));
     }
 }

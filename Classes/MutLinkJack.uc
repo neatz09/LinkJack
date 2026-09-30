@@ -52,28 +52,26 @@ function InitializeWSUTBridge()
     bUseEnhancedNetCode = WSUTMutator.GetPropertyText("bEnableEnhancedNetCode") ~= "True";
     if (bUseEnhancedNetCode)
     {
-        BridgeWeaponName = "LinkJackWSUT.LinkJackNewNetLinkGun";
-        BridgePickupName = "LinkJackWSUT.LinkJackNewNetLinkGunPickup";
+        BridgeWeaponName = "LinkJack.LinkJackNewNetLinkGun";
+        BridgePickupName = "LinkJack.LinkJackNewNetLinkGunPickup";
     }
     else
     {
-        BridgeWeaponName = "LinkJackWSUT.LinkJackUTCompLinkGun";
-        BridgePickupName = "LinkJackWSUT.LinkJackUTCompLinkGunPickup";
+        BridgeWeaponName = "LinkJack.LinkJackUTCompLinkGun";
+        BridgePickupName = "LinkJack.LinkJackUTCompLinkGunPickup";
     }
 
-    BridgeHelperClass = class<Actor>(DynamicLoadObject("LinkJackWSUT.LinkJackWSUTBridge", class'Class', true));
+    BridgeHelperClass = class<Actor>(DynamicLoadObject("LinkJack.LinkJackWSUTBridge", class'Class', true));
     if (BridgeHelperClass == None)
     {
-        Log("LinkJack: WSUT detected but LinkJackWSUT bridge classes are unavailable.");
+        Log("LinkJack: WSUT detected but the unified bridge classes are unavailable.");
         return;
     }
-
-    AddToPackageMap("LinkJackWSUT");
 
     BridgeHelper = Spawn(BridgeHelperClass);
     if (BridgeHelper == None)
     {
-        Log("LinkJack: WSUT detected but the LinkJackWSUT mapping helper could not be spawned.");
+        Log("LinkJack: WSUT detected but the unified mapping helper could not be spawned.");
         return;
     }
 
